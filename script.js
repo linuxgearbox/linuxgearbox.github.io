@@ -2,10 +2,22 @@
 document.addEventListener('DOMContentLoaded',function(){
   const toggle = document.querySelector('.nav-toggle');
   const nav = document.querySelector('.site-nav');
+  const logo = document.querySelector('.logo');
+  const brandText = document.querySelector('.brand-text');
+  
+  // Logo fallback
+  if(logo && brandText){
+    logo.addEventListener('error', function(){
+      logo.style.display = 'none';
+      brandText.style.display = 'block !important';
+    });
+  }
+  
   toggle && toggle.addEventListener('click', ()=>{
     const expanded = toggle.getAttribute('aria-expanded') === 'true';
     toggle.setAttribute('aria-expanded', String(!expanded));
-    nav.style.display = expanded ? 'none' : 'block';
+    nav.style.display = expanded ? 'none' : 'flex';
+    nav.style.flexDirection = 'column';
   });
 
   // Smooth scroll for internal links
@@ -18,6 +30,10 @@ document.addEventListener('DOMContentLoaded',function(){
         if(target){
           target.scrollIntoView({behavior:'smooth',block:'start'});
           history.pushState && history.pushState(null,'',href);
+          if(nav.style.display === 'flex'){
+            nav.style.display = 'none';
+            toggle.setAttribute('aria-expanded', 'false');
+          }
         }
       }
     });

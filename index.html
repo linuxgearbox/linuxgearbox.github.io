@@ -9,12 +9,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a2d9f0b7f1.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVJkEZSMUkrQ6usKGiOW03ijLT28KNUjbQQYLLTyW2F2+YqKFbqRvVI+QTY818JxjgrQv3505MA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script defer src="https://cdn.jsdelivr.net/npm/@fontawesome/fontawesome-free@6.4.0/js/all.js"></script>
 </head>
 <body class="dark">
   <header class="site-header">
     <div class="container nav-container">
-      <a class="brand" href="#hero"><img src="logo.png" alt="LinuxGearBox Logo" class="logo"></a>
+      <a class="brand" href="#hero">
+        <img src="logo.png" alt="LinuxGearBox Logo" class="logo">
+        <span class="brand-text">LinuxGearBox</span>
+      </a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -284,14 +288,17 @@ Booting your career ✦</pre>
     </section>
 
     <section id="trainer" class="section trainer">
-      <div class="container trainer-grid">
-        <div class="trainer-card">
-          <img src="trainer.jpg" alt="Prashanth Kusuma" class="trainer-photo">
-          <h2>Meet Your Instructor</h2>
-          <h3>Prashanth Kusuma</h3>
-          <p class="tagline">Linux Trainer | DevOps Mentor | Cloud & Automation Enthusiast</p>
-          <p>Prashanth Kusuma is a passionate Linux and DevOps trainer dedicated to helping students, graduates, and working professionals build strong Linux foundations and advance their careers in modern IT domains. With practical industry-focused training, hands-on demonstrations, and real-world use cases, he helps learners gain confidence in Linux Administration, Shell Scripting, Automation, Cloud Technologies, DevOps practices, and System Engineering.</p>
-          <p>His mission is to simplify complex Linux concepts and make professional-level Linux skills accessible to everyone.</p>
+      <div class="container">
+        <div class="trainer-banner trainer-banner-noimage">
+          <div class="trainer-details">
+            <h2>Meet Your Instructor</h2>
+            <h3>Prashanth Kusuma</h3>
+            <p class="tagline">Linux Trainer | DevOps Mentor | Cloud & Automation Enthusiast</p>
+            <p>Prashanth Kusuma is a passionate Linux and DevOps trainer dedicated to helping students, graduates, and working professionals build strong Linux foundations and advance their careers in modern IT domains. With practical industry-focused training, hands-on demonstrations, and real-world use cases, he helps learners gain confidence in Linux Administration, Shell Scripting, Automation, Cloud Technologies, DevOps practices, and System Engineering.</p>
+            <p>His mission is to simplify complex Linux concepts and make professional-level Linux skills accessible to everyone.</p>
+          </div>
+        </div>
+        <div class="trainer-links">
           <div class="badges">
             <span class="badge">Linux Administration</span>
             <span class="badge">Shell Scripting</span>
@@ -303,26 +310,11 @@ Booting your career ✦</pre>
             <span class="badge">Cybersecurity</span>
             <span class="badge">Data Engineering</span>
           </div>
-          <div class="contact-card" id="contact">
-            <p><i class="fas fa-phone-alt"></i> <a href="tel:+917093371821">+91 7093371821</a></p>
-            <a class="btn btn-primary" href="tel:+917093371821">Contact Trainer</a>
-          </div>
-        </div>
-        <div class="trainer-info">
-          <div class="personal-banner">
-            <h3>Learn Linux from Industry-Focused Training</h3>
-            <p>Join LinuxGearBox and accelerate your journey into Linux, DevOps, Cloud Computing, Automation, Cybersecurity, and Modern Infrastructure Technologies.</p>
-            <div class="banner-ctas">
-              <a class="btn btn-primary" href="#curriculum">Explore Curriculum</a>
-              <a class="btn btn-ghost" href="https://www.youtube.com/@PrashanthTrainer" target="_blank" rel="noopener">Watch YouTube Channel</a>
-            </div>
-          </div>
-
           <div class="connect-cards">
-            <a class="social-card youtube" href="https://www.youtube.com/@PrashanthTrainer" target="_blank" rel="noopener"><i class="fab fa-youtube"></i><span>YouTube</span></a>
-            <a class="social-card linkedin" href="https://www.linkedin.com/in/prashanth-kusuma-5bbb7425b/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
-            <a class="social-card instagram" href="#" target="_blank" rel="noopener"><i class="fab fa-instagram"></i><span>Instagram</span></a>
-            <a class="social-card discord" href="https://discord.com/channels/@me/1215980839549145089" target="_blank" rel="noopener"><i class="fab fa-discord"></i><span>Discord</span></a>
+            <a class="social-card youtube" href="https://www.youtube.com/@PrashanthTrainer" target="_blank" rel="noopener" title="YouTube Channel" aria-label="YouTube"><img src="youtube.png" alt="YouTube logo"><span>YouTube</span></a>
+            <a class="social-card linkedin" href="https://www.linkedin.com/in/prashanth-kusuma-5bbb7425b/" target="_blank" rel="noopener" title="LinkedIn Profile" aria-label="LinkedIn"><img src="linkedin.png" alt="LinkedIn logo"><span>LinkedIn</span></a>
+            <a class="social-card instagram" href="#" target="_blank" rel="noopener" title="Instagram Profile" aria-label="Instagram"><img src="instagram.png" alt="Instagram logo"><span>Instagram</span></a>
+            <a class="social-card discord" href="https://discord.com/channels/@me/1215980839549145089" target="_blank" rel="noopener" title="Discord Community" aria-label="Discord"><img src="discord.png" alt="Discord logo"><span>Discord</span></a>
           </div>
         </div>
       </div>
@@ -330,9 +322,8 @@ Booting your career ✦</pre>
   </main>
 
   <div class="floating-contact" aria-hidden="false">
-    <a href="tel:+917093371821" class="float-btn call" title="Call"><i class="fas fa-phone"></i></a>
-    <a href="https://www.youtube.com/@PrashanthTrainer" target="_blank" rel="noopener" class="float-btn yt" title="YouTube"><i class="fab fa-youtube"></i></a>
-    <a href="https://www.linkedin.com/in/prashanth-kusuma-5bbb7425b/" target="_blank" rel="noopener" class="float-btn li" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="https://www.youtube.com/@PrashanthTrainer" target="_blank" rel="noopener" class="float-btn yt" title="YouTube Channel" aria-label="YouTube"><img src="youtube.png" alt="YouTube logo"></a>
+    <a href="https://www.linkedin.com/in/prashanth-kusuma-5bbb7425b/" target="_blank" rel="noopener" class="float-btn li" title="LinkedIn Profile" aria-label="LinkedIn"><img src="linkedin.png" alt="LinkedIn logo"></a>
   </div>
 
   <footer class="site-footer">
@@ -345,10 +336,10 @@ Booting your career ✦</pre>
       <div>
         <h4>Connect</h4>
         <div class="socials">
-          <a href="https://www.youtube.com/@PrashanthTrainer" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
-          <a href="https://www.linkedin.com/in/prashanth-kusuma-5bbb7425b/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
-          <a href="#" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-          <a href="https://github.com/" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+          <a href="https://www.youtube.com/@PrashanthTrainer" target="_blank" rel="noopener" title="YouTube" aria-label="YouTube"><img src="youtube.png" alt="YouTube"></a>
+          <a href="https://www.linkedin.com/in/prashanth-kusuma-5bbb7425b/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn"><img src="linkedin.png" alt="LinkedIn"></a>
+          <a href="#" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram"><img src="instagram.png" alt="Instagram"></a>
+          <a href="https://github.com/" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><img src="github.png" alt="GitHub"></a>
         </div>
       </div>
       <div>
